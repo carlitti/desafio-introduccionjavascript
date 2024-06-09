@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="https://www.amd.com/system/files/2020-05/461767_MSI_Bravo_17_AMD_laptop_1260x709_0.png">
+            <h3>Laptop Gamer AMD</h3>
+            <p>Precio base: $<span id="precio"></span></p>
+            <div class="card-cantidad">
+            <p>Cantidad: <span id="cantidad"></span></p>
+            <button onclick="
+                cantidad = cantidad + 1;
+                totalPagar = cantidad * precioBase;
+                document.querySelector('#cantidad').innerHTML = cantidad;
+                document.querySelector('#totalPagar').innerHTML = totalPagar;
+                ">+</button>
+            <button onclick="
+                          cantidad = cantidad - 1;
+                totalPagar = cantidad * precioBase;
+                document.querySelector('#cantidad').innerHTML = cantidad;
+                document.querySelector('#totalPagar').innerHTML = totalPagar;
+            ">-</button>
+            </div>
+        </div>
+        <div class="total">
+            <p>Total a pagar: $<span id="totalPagar">0</span></p>
+        </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
